@@ -26,8 +26,8 @@
     .field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#77766d 50%),linear-gradient(135deg,#77766d 50%,transparent 50%);background-position:calc(100% - 5px) 17px,100% 17px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
     .consent{display:flex;align-items:flex-start;gap:10px;margin:6px 0 25px;color:#66645b;font-size:12px;line-height:1.7}
     .consent input{margin:3px 0 0;accent-color:var(--forest)}
-    .send{display:inline-flex;align-items:center;gap:16px;margin-top:2px;padding:0 0 8px;border:0;border-bottom:1px solid var(--ink);background:transparent;color:var(--ink);font:15px var(--sans);cursor:pointer}
-    .send span{font-size:21px;line-height:1}
+    .send{display:inline-flex;align-items:center;justify-content:center;gap:18px;margin-top:2px;padding:15px 22px;border:1px solid var(--forest);border-radius:2px;background:var(--forest);color:#fff;font:500 14px var(--sans);cursor:pointer;transition:background .2s,border-color .2s,transform .2s}.send:hover{background:#0b493b;border-color:#0b493b;transform:translateY(-1px)}.send:focus-visible{outline:2px solid var(--forest);outline-offset:4px}
+    .send span{font-size:20px;line-height:1}
     .form-note{margin:20px 0 0;color:var(--muted);font-size:12px;line-height:1.8}
     @media(max-width:760px){.leave-layout{grid-template-columns:1fr;gap:36px;padding:42px 0 60px}.leave-intro{max-width:560px}.photo-strip{height:72px;gap:5px;margin-bottom:30px}.leave-form{padding:0}}
   </style>
@@ -45,12 +45,12 @@
         <p class="eyebrow">A few words from you</p>
         <h1>Leave a few words.</h1>
         <p>If we’ve worked together, or you know me in another part of life, I’d be glad if you shared a little about your experience. A few honest words are more than enough.</p>
-        <p class="leave-note">Your message will be reviewed before it appears on the Endorsements page. Thank you for taking the time.</p>
+        <p class="leave-note">Your impression of me will be reviewed before it appears on the Endorsements page. Thank you for taking the time.</p>
       </div>
       <form class="leave-form" onsubmit="event.preventDefault();alert('This is a visual preview. Submission will be connected in a later phase.');">
-        <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="How should I address you?"></div>
-        <div class="field"><label for="relationship">How do we know each other?</label><select id="relationship" name="relationship" required><option value="" selected disabled>Please choose</option><option>Client</option><option>Colleague</option><option>Friend</option><option>Former manager / supervisor</option><option>Collaborator</option><option>Other</option></select></div>
-        <div class="field"><label for="message">Your message</label><textarea id="message" name="message" required placeholder="Write whatever feels natural..."></textarea></div>
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" required ></div>
+        <div class="field"><label for="relationship">Relationship</label><select id="relationship" name="relationship" required><option value="" selected disabled>Please choose</option><option>Client</option><option>Colleague</option><option>Friend</option><option>Former manager / supervisor</option><option>Collaborator</option><option>Other</option></select></div>
+        <div class="field"><label for="message">Your message</label><textarea id="message" name="message" required ></textarea></div>
         <label class="consent"><input type="checkbox" required><span>I’m happy for my words to be reviewed and shared on this website.</span></label>
         <button class="send" type="submit">Share a few words <span aria-hidden="true">→</span></button>
       </form>
