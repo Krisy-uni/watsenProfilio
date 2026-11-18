@@ -3,36 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Recommendations — Watsen</title>
+  <meta name="theme-color" content="#f7f4ee">
+  <title>Endorsements — Watsen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/site.css">
   <style>
-    .recommendations-intro{max-width:680px}
-    .recommendation-empty{max-width:640px;margin-left:15%;padding:28px 0;border-top:1px solid var(--line)}
-    .recommendation-empty p{margin:0;color:#626158;font-size:15px;line-height:1.85}
-    .recommendation-invite{display:inline-block;margin-top:22px;padding-bottom:7px;border-bottom:1px solid #858378;font-size:13px}
-    @media(max-width:680px){.recommendation-empty{margin-left:0}}
+    .endorsement-intro{max-width:680px}
+    .endorsement-list{max-width:940px;margin:0 0 0 15%}
+    .endorsement{display:grid;grid-template-columns:155px minmax(0,1fr);gap:30px;padding:24px 0;border-bottom:1px solid var(--line)}
+    .endorsement:first-of-type{border-top:1px solid var(--line)}
+    .endorsement-kind{padding-top:3px;color:var(--muted);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+    .endorsement-copy{margin:0;color:#56564d;font-size:15px;line-height:1.8}
+    .endorsement-by{margin:12px 0 0;color:var(--muted);font-size:12px}
+    .preview-note{margin:0 0 22px;color:var(--muted);font-size:11px;letter-spacing:.08em}
+    .invite{display:inline-block;margin-top:30px;padding-bottom:8px;border-bottom:1px solid currentColor;font-size:14px}
+    @media(max-width:680px){.endorsement-list{margin-left:0}.endorsement{grid-template-columns:1fr;gap:8px;padding:20px 0}}
   </style>
 </head>
 <body>
   <header class="shell header">
     <a class="brand" href="index.html">Watsen</a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="index.html">Home</a><a href="work.html">Work</a><a href="journal.html">Journal</a><a href="concepts.html">Concepts</a><a href="recommendations.html">Recommendations</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a><a href="work.html">Work</a><a href="journal.html">Journal</a><a href="concepts.html">Concepts</a><a href="recommendations.html">Endorsements</a><a href="contact.html">Contact</a>
     </nav>
   </header>
   <main>
-    <section class="shell page-intro recommendations-intro">
-      <p class="eyebrow">Feedback shared by others</p>
-      <h1 class="page-title">Recommendations</h1>
-      <p class="intro-copy">A record of feedback from people I have worked with. Shared in their own words, and with their permission.</p>
+    <section class="shell page-intro endorsement-intro">
+      <p class="eyebrow">From people I've worked with and know</p>
+      <h1 class="page-title">Endorsements</h1>
+      <p class="intro-copy">A collection of personal and professional endorsements from people who have worked with me, collaborated with me or know me.</p>
     </section>
     <section class="shell section">
-      <div class="recommendation-empty">
-        <p>There are no recommendations published here yet. As people choose to share their experience, their feedback will be added to this page.</p>
-        <a class="recommendation-invite" href="recommend.html">Leave a recommendation →</a>
+      <div class="endorsement-list">
+        <p class="preview-note">SAMPLE CONTENT FOR DESIGN PREVIEW — NOT REAL ENDORSEMENTS</p>
+        <article class="endorsement"><div class="endorsement-kind">Client</div><div><p class="endorsement-copy">Watsen took time to understand what we needed and approached the work with care. He was practical, reliable and thoughtful about the details throughout the project.</p><p class="endorsement-by">Sample client · Garden project</p></div></article>
+        <article class="endorsement"><div class="endorsement-kind">Colleague</div><div><p class="endorsement-copy">He is willing to get involved, share ideas and work through problems as a team. I appreciated his practical approach and the way he followed things through.</p><p class="endorsement-by">Sample colleague · Project collaboration</p></div></article>
+        <article class="endorsement"><div class="endorsement-kind">Friend</div><div><p class="endorsement-copy">When Watsen takes an interest in something, he puts genuine time into understanding it. He is hands-on, patient and always looking for ways to improve.</p><p class="endorsement-by">Sample friend · Personal</p></div></article>
+        <article class="endorsement"><div class="endorsement-kind">Former manager</div><div><p class="endorsement-copy">Watsen is dependable and takes responsibility for his work. He looks for practical solutions, pays attention to details and can be trusted to follow through.</p><p class="endorsement-by">Sample former manager · Previous workplace</p></div></article>
+        <a class="invite" href="recommend.html">Leave an endorsement →</a>
       </div>
     </section>
   </main>
