@@ -1,1 +1,72 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Share a Recommendation — Watsen</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles/site.css"></head><body><header class="shell header"><a class="brand" href="index.html">Watsen</a><nav class="nav"><a href="index.html">Home</a><a href="work.html">Work</a><a href="journal.html">Journal</a><a href="concepts.html">Concepts</a><a href="recommendations.html">Recommendations</a><a href="contact.html">Contact</a></nav></header><main><section class="shell page-intro"><p class="eyebrow">A note from you</p><h1 class="page-title">Share a Recommendation</h1><p class="intro-copy">If we have worked together, I would appreciate hearing about your experience. Your words help me reflect on my work and continue to improve.</p></section><section class="shell section"><form class="form-wrap" onsubmit="event.preventDefault();alert('This is a visual prototype. Form submission will be connected in a later phase.');"><label class="field"><span>Your name</span><input required placeholder="Name"></label><label class="field"><span>Your relationship</span><select><option>Client</option><option>Colleague</option><option>Collaborator</option><option>Other</option></select></label><label class="field"><span>Your recommendation</span><textarea required placeholder="Write a few words about your experience..."></textarea></label><label class="field"><span>Email (optional)</span><input type="email" placeholder="you@example.com"></label><label class="field" style="display:flex;align-items:flex-start;gap:10px"><input type="checkbox" required style="width:auto;margin-top:2px"><span>I agree that my recommendation may be reviewed and published on this website.</span></label><button class="button" type="submit">Submit recommendation →</button><p class="note" style="margin-top:16px">Your recommendation will be reviewed before anything appears publicly. This prototype does not send or store submissions yet.</p></form></section></main><footer class="footer"><div class="shell footer-inner"><div><p class="footer-brand">Watsen</p><p class="footer-note">Work · Plants · Design</p><p class="footer-meta">Brisbane, Australia</p></div><div class="footer-links"><a href="work.html">Work</a><a href="recommendations.html">Kind Words</a><a href="contact.html">Contact</a><a href="contact.html">Contact</a></div></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>Leave a Few Words — Watsen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+  <style>
+    .leave-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(54px,9vw,130px);align-items:start;padding:54px 0 76px}
+    .leave-intro{max-width:390px}.leave-intro h1{margin:0;font:400 clamp(42px,4.5vw,58px)/1.12 var(--serif);letter-spacing:-1.6px}
+    .leave-intro p:not(.eyebrow){margin:24px 0 0;color:#56564d;font-size:16px;line-height:1.9}
+    .leave-note{margin-top:38px!important;color:var(--muted)!important;font-size:12px!important;line-height:1.8!important}
+    .photo-strip{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:8px;height:92px;margin:0 0 38px;overflow:hidden}
+    .photo-strip img{width:100%;height:100%;object-fit:cover}
+    .leave-form{max-width:620px;padding-top:4px}
+    .field{margin:0 0 27px}
+    .field label,.field>span{display:block;margin-bottom:10px;color:#56564d;font-size:13px}
+    .field input:not([type=checkbox]),.field textarea,.field select{display:block;width:100%;border:0;border-bottom:1px solid #c9c5bb;border-radius:0;padding:10px 0 13px;background:transparent;color:var(--ink);font:15px var(--sans)}
+    .field input::placeholder,.field textarea::placeholder{color:#a09d93}
+    .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--forest)}
+    .field textarea{min-height:112px;resize:vertical}
+    .field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#77766d 50%),linear-gradient(135deg,#77766d 50%,transparent 50%);background-position:calc(100% - 5px) 17px,100% 17px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+    .consent{display:flex;align-items:flex-start;gap:10px;margin:6px 0 25px;color:#66645b;font-size:12px;line-height:1.7}
+    .consent input{margin:3px 0 0;accent-color:var(--forest)}
+    .send{display:inline-flex;align-items:center;gap:16px;margin-top:2px;padding:0 0 8px;border:0;border-bottom:1px solid var(--ink);background:transparent;color:var(--ink);font:15px var(--sans);cursor:pointer}
+    .send span{font-size:21px;line-height:1}
+    .form-note{margin:20px 0 0;color:var(--muted);font-size:12px;line-height:1.8}
+    @media(max-width:760px){.leave-layout{grid-template-columns:1fr;gap:36px;padding:42px 0 60px}.leave-intro{max-width:560px}.photo-strip{height:72px;gap:5px;margin-bottom:30px}.leave-form{padding:0}}
+  </style>
+</head>
+<body>
+  <header class="shell header">
+    <a class="brand" href="index.html">Watsen</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="work.html">Work</a><a href="journal.html">Journal</a><a href="concepts.html">Concepts</a><a href="recommendations.html">Endorsements</a><a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main class="shell">
+    <section class="leave-layout">
+      <div class="leave-intro">
+        <p class="eyebrow">A few words from you</p>
+        <h1>Leave a few words.</h1>
+        <p>If we’ve worked together, or you know me in another part of life, I’d be glad if you shared a little about your experience. A few honest words are more than enough.</p>
+        <p class="leave-note">Your message will be reviewed before it appears on the Endorsements page. Thank you for taking the time.</p>
+      </div>
+      <form class="leave-form" onsubmit="event.preventDefault();alert('This is a visual preview. Submission will be connected in a later phase.');">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="How should I address you?"></div>
+        <div class="field"><label for="relationship">How do we know each other?</label><select id="relationship" name="relationship" required><option value="" selected disabled>Please choose</option><option>Client</option><option>Colleague</option><option>Friend</option><option>Former manager / supervisor</option><option>Collaborator</option><option>Other</option></select></div>
+        <div class="field"><label for="message">Your message</label><textarea id="message" name="message" required placeholder="Write whatever feels natural..."></textarea></div>
+        <label class="consent"><input type="checkbox" required><span>I’m happy for my words to be reviewed and shared on this website.</span></label>
+        <button class="send" type="submit">Share a few words <span aria-hidden="true">→</span></button>
+        <p class="form-note">No email address or account needed. Just a short note, in your own words.</p>
+      </form>
+    </section>
+    <div class="photo-strip" aria-label="Garden and plant photographs">
+      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80" alt="Hands working with soil and plants">
+      <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=700&q=80" alt="Close-up of green leaves">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80" alt="Sunlight through trees">
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div><p class="footer-brand">Watsen</p><p class="footer-note">Work · Plants · Design</p><p class="footer-meta">Brisbane, Australia</p></div>
+      <div class="footer-links"><a href="work.html">Work</a><a href="journal.html">Journal</a><a href="concepts.html">Concepts</a><a href="recommendations.html">Endorsements</a><a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>
