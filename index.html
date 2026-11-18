@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ee">
+  <meta name="description" content="A personal archive of garden projects, plant studies and design thinking by Watsen.">
+  <title>Watsen — Work, Plants & Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f7f4ee;
+      --ink: #37372e;
+      --muted: #77766d;
+      --line: #dedbd2;
+      --forest: #07382d;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --page-width: 1320px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--forest); outline-offset: 5px; }
+    img { display: block; max-width: 100%; }
+
+    .site-shell {
+      width: min(calc(100% - 96px), var(--page-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      min-height: 104px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .wordmark {
+      font-family: var(--serif);
+      font-size: 29px;
+      letter-spacing: -.7px;
+      white-space: nowrap;
+    }
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(22px, 3.5vw, 54px);
+      color: #48483f;
+      font-size: 15px;
+    }
+    .main-nav a { transition: opacity .2s ease; }
+    .main-nav a:hover { opacity: .58; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(280px, .88fr) minmax(0, 1.12fr);
+      align-items: center;
+      gap: clamp(48px, 7vw, 104px);
+      padding: 24px 0 70px;
+    }
+    .hero-copy { max-width: 510px; }
+    .eyebrow {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(42px, 4.1vw, 62px);
+      font-weight: 400;
+      letter-spacing: -1.8px;
+      line-height: 1.12;
+    }
+    .hero-description {
+      max-width: 480px;
+      margin: 34px 0 0;
+      color: #56564d;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 62px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid currentColor;
+      font-size: 15px;
+      transition: gap .2s ease;
+    }
+    .text-link:hover { gap: 25px; }
+    .text-link span { font-size: 22px; line-height: 1; }
+    .hero-image-wrap { width: 100%; }
+    .hero-image {
+      width: 100%;
+      aspect-ratio: 1.48 / 1;
+      object-fit: cover;
+    }
+
+    .latest-section {
+      padding: 30px 0 92px;
+      border-top: 1px solid var(--line);
+    }
+    .section-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 26px;
+    }
+    .section-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 400;
+      letter-spacing: -.6px;
+    }
+    .view-all {
+      color: #4e4e45;
+      font-size: 14px;
+    }
+    .latest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-left: 15%;
+    }
+    .latest-item {
+      min-width: 0;
+      padding: 0 clamp(24px, 3vw, 46px);
+      border-left: 1px solid var(--line);
+    }
+    .latest-item:first-child { border-left: 0; }
+    .latest-date {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .13em;
+    }
+    .latest-item h3 {
+      margin: 0 0 10px;
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .latest-description {
+      min-height: 48px;
+      margin: 0 0 22px;
+      color: #5f5e55;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .latest-image {
+      width: 100%;
+      aspect-ratio: 1.75 / 1;
+      object-fit: cover;
+    }
+
+    .site-footer {
+      padding: 42px 0 34px;
+      background: var(--forest);
+      color: #f3f0e8;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .footer-wordmark {
+      margin: 0 0 10px;
+      font-family: var(--serif);
+      font-size: 27px;
+      font-weight: 400;
+    }
+    .footer-note, .footer-meta {
+      margin: 0;
+      color: #d0d8d0;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      color: #e6e9e2;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .site-shell { width: min(calc(100% - 56px), var(--page-width)); }
+      .main-nav { gap: 18px; font-size: 13px; }
+      .hero { gap: 42px; }
+      .latest-grid { margin-left: 8%; }
+      .latest-item { padding: 0 22px; }
+    }
+    @media (max-width: 680px) {
+      .site-shell { width: calc(100% - 40px); }
+      .site-header {
+        min-height: 82px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 13px;
+      }
+      .wordmark { font-size: 26px; }
+      .main-nav {
+        width: 100%;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        white-space: nowrap;
+        font-size: 12px;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 42px 0 52px;
+      }
+      h1 { max-width: 460px; font-size: clamp(42px, 12vw, 56px); }
+      .hero-description { margin-top: 24px; font-size: 15px; }
+      .text-link { margin-top: 34px; }
+      .hero-image { aspect-ratio: 1.35 / 1; }
+      .latest-section { padding: 24px 0 60px; }
+      .section-title { font-size: 30px; }
+      .latest-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-left: 0;
+      }
+      .latest-item, .latest-item:first-child {
+        padding: 0 0 28px;
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .latest-item:last-child { border-bottom: 0; }
+      .latest-description { min-height: 0; margin-bottom: 16px; }
+      .latest-image { max-height: 220px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .footer-links { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-shell site-header">
+    <a class="wordmark" href="#" aria-label="Watsen home">Watsen</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#journal">Journal</a>
+      <a href="#concepts">Concepts</a>
+      <a href="#recommendations">Recommendations</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="site-shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Work · Plants · Design</p>
+        <h1 id="hero-title">Landscape Design<br>&amp; Planting</h1>
+        <p class="hero-description">
+          A personal archive of garden projects, plant studies and design thinking —
+          recorded through practice, observation and everyday work.
+        </p>
+        <a class="text-link" href="#work">Explore Work <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-image-wrap">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1500&q=85"
+          alt="A quiet garden with layered greenery and natural planting"
+        >
+      </div>
+    </section>
+
+    <section class="site-shell latest-section" id="work" aria-labelledby="latest-title">
+      <div class="section-topline">
+        <h2 class="section-title" id="latest-title">Latest</h2>
+        <a class="view-all" href="#work">View All <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="latest-grid">
+        <article class="latest-item" id="journal">
+          <p class="latest-date">18 NOV 2026</p>
+          <h3>Plant Note</h3>
+          <p class="latest-description">Understanding soil moisture in garden planting.</p>
+          <img
+            class="latest-image"
+            src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=80"
+            alt="Close-up of green leaves"
+            loading="lazy"
+          >
+        </article>
+
+        <article class="latest-item">
+          <p class="latest-date">12 NOV 2026</p>
+          <h3>Garden Project</h3>
+          <p class="latest-description">Residential garden — The Gap.</p>
+          <img
+            class="latest-image"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
+            alt="Garden planting and landscape details"
+            loading="lazy"
+          >
+        </article>
+
+        <article class="latest-item" id="concepts">
+          <p class="latest-date">05 NOV 2026</p>
+          <h3>Design Concept</h3>
+          <p class="latest-description">Exploring a different planting approach.</p>
+          <img
+            class="latest-image"
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+            alt="Sunlight filtering through trees"
+            loading="lazy"
+          >
+        </article>
+      </div>
+    </section>
+
+    <section id="recommendations" class="site-shell" aria-label="Recommendations"></section>
+    <section id="about" class="site-shell" aria-label="About Watsen"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <div>
+        <p class="footer-wordmark">Watsen</p>
+        <p class="footer-note">Work · Plants · Design</p>
+        <p class="footer-meta">Brisbane, Australia</p>
+      </div>
+      <div class="footer-links">
+        <a href="#work">Work</a>
+        <a href="#journal">Journal</a>
+        <a href="#about">About</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
